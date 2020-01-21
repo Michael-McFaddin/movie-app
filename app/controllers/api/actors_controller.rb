@@ -1,14 +1,41 @@
 class Api::ActorsController < ApplicationController
 
-  def actor_action
+  def index
     @actors = Actor.all
-    render "actor.json.jb"
+    render "index.json.jb"
   end
 
-  def actor_search_action
-    person = params[:actor].capitalize
-    @actor = Actor.find_by(first_name: person)
-    render "actor_search.json.jb"
+  def create
+    @actor = Actor.new(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      known_for: params[:known_for]
+      )
+    @actor.save
+    render "show.json.jb"
   end
+
+  def show
+    @actor = Actor.find(params[:id])
+    render "show.json.jb"
+  end
+
+  def update
+    @actor = Actor.find(params[:id])
+
+    @actor.first_name = params[:first_name] || @actor.first_name
+    @actor.last_name = params[:last_name] || @actor.last_name
+    @actor.known_for = params[:known_for] || @actor.known_for
+    @actor.save
+
+    render "show.json.jb"
+  end
+
+  def delete
+    @actor = Actor.find_by(id: params[:id])
+    @actor.destroy
+    render json: {message: "This entry has been deleted!"}
+  end
+
 
 end
