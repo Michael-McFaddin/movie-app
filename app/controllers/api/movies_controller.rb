@@ -2,6 +2,9 @@ class Api::MoviesController < ApplicationController
 
   def index
     @movie = Movie.all
+
+    @movie = @movie.where("english = ?", true)
+
     render "index.json.jb"
   end
 
@@ -27,7 +30,7 @@ class Api::MoviesController < ApplicationController
   end
 
   def update
-    @movie = Movie.find_by(id: params[:id])
+    @movie = Movie.find(params[:id])
 
     @movie.title = params[:title] || @movie.title
     @movie.year = params[:year] || @movie.year
