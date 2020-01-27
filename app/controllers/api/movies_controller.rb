@@ -1,9 +1,9 @@
 class Api::MoviesController < ApplicationController
 
   def index
-    @movie = Movie.all
+    @movies = Movie.all
 
-    @movie = @movie.where("english = ?", true)
+    @movies = @movies.where(english: true)
 
     render "index.json.jb"
   end
