@@ -1,3 +1,13 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+
+
 # actor = Actor.new({
 #   first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
 # actor.save
@@ -17,3 +27,19 @@
 
 # movie = Movie.new({title: "Boondock Saints", year: 1999, plot: "Tired of the crime overrunning the streets of Boston, Irish Catholic twin brothers Conner (Sean Patrick Flanery) and Murphy (Norman Reedus) are inspired by their faith to cleanse their hometown of evil with their own brand of zealous vigilante justice."})
 # movie.save
+
+# Genre.create(name: "thriller")
+# Genre.create(name: "romcom")
+# Genre.create(name: "drama")
+# Genre.create(name: "action")
+# Genre.create(name: "comedy")
+# Genre.create(name: "scifi")
+
+# MovieGenre.create(genre_id: 6, movie_id: 5)
+# MovieGenre.create(genre_id: 2, movie_id: 2)
+# MovieGenre.create(genre_id: 4, movie_id: 6)
+# MovieGenre.create(genre_id: 6, movie_id: 6)
+# MovieGenre.create(genre_id: 4, movie_id: 3)
+# MovieGenre.create(genre_id: 3, movie_id: 1)
+# MovieGenre.create(genre_id: 4, movie_id: 1)
+
