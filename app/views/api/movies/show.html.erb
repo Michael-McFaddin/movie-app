@@ -1,0 +1,32 @@
+<h1><%= @movie.title %></h1>
+<h3><%= @movie.year %></h3>
+<h3>Director: <%= @movie.director %></h3>
+<h4><%= @movie.plot %></h4>
+
+<label>Click me 
+  <input type="text" id="user" name="name" />
+</label>
+
+<fieldset>
+  <legend>What is your favorite meal?</legend>
+  <ul>
+    <li>
+      <label for="soup">Soup</label>
+      <input type="radio" id="soup" name="meal" value="soup" checked>
+    </li>
+    <li>
+      <label for="curry">Curry</label>
+      <input type="radio" id="curry" name="meal" value="curry">
+    </li>
+    <li>
+      <label for="pizza">Pizza</label>
+      <input type="radio" id="pizza" name="meal" value="pizza">
+    </li>
+  </ul>
+</fieldset>
+
+<button type="button">
+    This is an <strong>anonymous button</strong>
+</button>
+
+<input type="button" value="This is an anonymous button">
