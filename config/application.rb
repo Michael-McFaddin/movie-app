@@ -25,6 +25,8 @@ module MovieApp
     config.generators.helper = false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    #added below to get seed_dump to work
+    # config.autoloader = :classic
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
