@@ -51,7 +51,7 @@ class Api::MoviesController < ApplicationController
   end
 
   def delete
-    @movie = Movie.find_by(id: params[:id])
+    @movie = Movie.find(params[:id])
     @movie.destroy
     render json: {message: "The selection has been deleted!"}
   end
