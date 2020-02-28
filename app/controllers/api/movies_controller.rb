@@ -1,6 +1,6 @@
 class Api::MoviesController < ApplicationController
 
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
 
   def index
     @movies = Movie.all
@@ -17,7 +17,8 @@ class Api::MoviesController < ApplicationController
       plot: params[:plot],
       director: params[:director],
       english: params[:english],
-      image_url: params[:image_url]
+      image_url: params[:image_url],
+      user_id: current_user.id
       )
     
     if @movie.save
