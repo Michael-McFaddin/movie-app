@@ -1,5 +1,5 @@
 User.create!([
-  {name: "Mike", email: "mike@email.com", password_digest: "password", admin: true},
+  {name: "Mike", email: "mike@email.com", password: "password", admin: true},
   {name: "Beth", email: "beth@email.com", password: "password", admin: false}
 ])
 
